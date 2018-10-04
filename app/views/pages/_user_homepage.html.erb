@@ -1,0 +1,3 @@
+<%= link_to 'Create new project', new_project_path %>
+<%= render  'user_tasks' if @tasks.any? %>
+<%= render  'user_projects' if @projects.any? %>

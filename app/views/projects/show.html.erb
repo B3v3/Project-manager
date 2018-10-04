@@ -1,0 +1,9 @@
+<h1> <%= @project.title %></h1>
+<p> <%= @project.description %></p>
+<% if @project.is_author?(current_user) %>
+<%= render 'invite_form' %>
+<%= render 'tasks/task_form' %>
+<% end %>
+
+<%= render partial: 'shared/tasks',
+    locals: {model: @project}  if @project.tasks.any? %>

@@ -1,0 +1,4 @@
+<%= form_for task,
+    url: update_status_project_task_path(@project, task) do |f| %>
+  <%= f.submit "Complete this task!" %>
+<% end %>

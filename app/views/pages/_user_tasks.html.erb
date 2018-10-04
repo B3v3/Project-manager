@@ -1,0 +1,6 @@
+<h3> Your current tasks: <h3>
+<% @tasks.each do |task| %>
+  <p>
+  <%= task.description %>(<%=link_to "#{task.project.title}", task.project%>)
+  </p>
+<% end %>

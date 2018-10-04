@@ -1,0 +1,4 @@
+Invite to <%= @project.title %>
+ <%= @project.author.name %> invites you to his project!
+ Be sure that you are logged in when you click the link!
+<%= new_project_membership_url(@project, auth_key: @project.invite_digest) %>

@@ -1,0 +1,7 @@
+<% if task.user_assigned? %>
+  <%= render partial: 'tasks/assign_task_button',  locals: {task: task}%>
+<% elsif task.not_done? %>
+  <%= render partial: 'tasks/update_status_button',  locals: {task: task}%>
+<% end %>
+<%= render partial: 'tasks/delete_task_button',
+    locals: {task: task} if @project.is_author?(current_user) %>

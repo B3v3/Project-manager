@@ -1,0 +1,7 @@
+<% model.tasks.each do |task| %>
+  <% if !task.description.nil? %>
+    <p><%= task.description %><%= "(#{task.user.name})" if task.user%></p>
+    <p><%= task.status? %></p>
+    <%= render partial: 'tasks/task_buttons', locals: {task: task}%>
+  <% end %>
+<% end %>

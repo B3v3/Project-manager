@@ -1,0 +1,4 @@
+<%= form_tag(send_invite_project_path(@project), method:'post') do %>
+  <%= email_field_tag :email %>
+  <%= submit_tag 'Send invite' %>
+<% end %>

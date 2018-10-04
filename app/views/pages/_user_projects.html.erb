@@ -1,0 +1,4 @@
+<h3> Projects you are participating in: </h3>
+<% @projects.each do |project| %>
+  <p><%= link_to "#{project.title}", project %></p>
+<% end %>
